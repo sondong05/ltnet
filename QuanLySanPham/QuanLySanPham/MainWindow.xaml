@@ -86,6 +86,16 @@
         <Button Content="Lọc sản phẩm" Canvas.Left="440" Canvas.Top="520" Click="btnCuaso2_Click" Width="100"/>
         <Button Content="Đóng" Canvas.Left="640" Canvas.Top="520" Click="btnDong_Click"/>
 
+        <Label Content="Nhập Mã SP tìm:" Canvas.Left="480" Canvas.Top="215" 
+               Style="{StaticResource labelsp}" FontWeight="Bold"/>
+
+        <TextBox x:Name="txtTimKiem" Canvas.Left="590" Canvas.Top="215" 
+                 Width="120" Height="25" VerticalContentAlignment="Center"/>
+
+        <Button Content="Tìm" Canvas.Left="720" Canvas.Top="215" 
+                Width="50" Height="25" Click="btnTimKiem_Click"
+                Background="Orange" Foreground="White" FontWeight="Bold"/>
+
         <Label Name="lbl_eMasp" Canvas.Left="400" Canvas.Top="80" Foreground="Red"/>
         <Label Name="lbl_eTensp" Canvas.Left="400" Canvas.Top="110" Foreground="Red"/>
         <Label Name="lbl_eSoluong" Canvas.Left="400" Canvas.Top="140" Foreground="Red"/>

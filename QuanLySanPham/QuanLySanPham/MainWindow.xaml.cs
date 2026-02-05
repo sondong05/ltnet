@@ -152,5 +152,43 @@ namespace QuanLySanPham
             LocSanPham cs = new LocSanPham(li);
             cs.ShowDialog();
         }
+
+        private void btnTimKiem_Click(object sender, RoutedEventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text.Trim();
+
+            // 1. Kiểm tra nếu chưa nhập gì
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                MessageBox.Show("Vui lòng nhập Mã sản phẩm cần tìm!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                txtTimKiem.Focus();
+                return;
+            }
+
+            // 2. Tìm kiếm trong danh sách (So sánh mã sản phẩm, không phân biệt hoa thường)
+            // Dùng hàm FirstOrDefault để lấy sản phẩm đầu tiên khớp mã
+            Sanpham spTimThay = ds.FirstOrDefault(s => s.masp.Equals(tuKhoa, StringComparison.OrdinalIgnoreCase));
+
+            // 3. Xử lý kết quả
+            if (spTimThay != null)
+            {
+                // Nếu tìm thấy:
+                // - Chọn dòng đó trên DataGrid
+                dgDanhsachSP.SelectedItem = spTimThay;
+
+                // - Cuộn màn hình đến dòng đó (để người dùng thấy nếu danh sách dài)
+                dgDanhsachSP.ScrollIntoView(spTimThay);
+
+                MessageBox.Show($"Đã tìm thấy sản phẩm: {spTimThay.tensp}", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                // Nếu không tìm thấy
+                MessageBox.Show("Không tìm thấy sản phẩm có mã: " + tuKhoa, "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                // Bỏ chọn trên DataGrid (nếu muốn)
+                dgDanhsachSP.SelectedItem = null;
+            }
+        }
     }
 }
