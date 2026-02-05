@@ -1,0 +1,39 @@
+﻿<Window x:Class="QuanLySanPham.LocSanPham"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lọc Sản Phẩm" Height="360" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="myheader" TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+    </Window.Resources>
+
+    <Canvas>
+        <Label Content="Sản phẩm có giá tiền > 500" Canvas.Left="210" Canvas.Top="14" 
+               FontSize="20" FontWeight="Bold" Foreground="Blue"/>
+
+        <DataGrid Name="dgDanhsachSP" Height="200" Width="635" AutoGenerateColumns="False"
+                  Canvas.Left="75" Canvas.Top="80"
+                  ColumnHeaderStyle="{StaticResource myheader}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã sản phẩm" Binding="{Binding masp}" Width="100"/>
+                <DataGridTextColumn Header="Tên sản phẩm" Binding="{Binding tensp}" Width="150"/>
+                <DataGridTextColumn Header="Số lượng" Binding="{Binding soluong}" Width="100"/>
+                <DataGridTextColumn Header="Giá tiền" Binding="{Binding giatien}" Width="100"/>
+                <DataGridTextColumn Header="Thành tiền" Binding="{Binding thanhtien, StringFormat={}{0:N0}}" Width="150">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextAlignment" Value="Right"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Foreground" Value="Red"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Canvas>
+</Window>
