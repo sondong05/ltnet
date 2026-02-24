@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitLTNET\\QuanLySanPham\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20191B3B-9F88-4826-8C4B-683EBBAC1C54}|QuanLySanPham\\QuanLySanPham.csproj|d:\\gitltnet\\quanlysanpham\\quanlysanpham\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20191B3B-9F88-4826-8C4B-683EBBAC1C54}|QuanLySanPham\\QuanLySanPham.csproj|solutionrelative:quanlysanpham\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\GitLTNET\\QuanLySanPham\\QuanLySanPham\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLySanPham\\MainWindow.xaml",
+              "ToolTip": "D:\\GitLTNET\\QuanLySanPham\\QuanLySanPham\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLySanPham\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-24T18:07:04.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
