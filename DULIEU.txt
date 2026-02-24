@@ -1,0 +1,5 @@
+scaffold-dbcontext "Data Source=QUYNHANH\SQLEXPRESS;initial catalog=truonghocdb;integrated security=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 8.0.0
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 8.0.0
+Install-Package Microsoft.EntityFrameworkCore.Design -Version 8.0.0
